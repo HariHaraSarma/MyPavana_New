@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+
+nav {
+    float: left;
+    max-width: 160px;
+    height: 440px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 50px;
+	font-size:16px;
+	
+}
+
+			
+nav ul a {
+    text-decoration: none;
+	font-size:20px;
+}
+
+article {
+    margin-left: 170px;
+    height: 440px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Pavana Medical Solutions</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="/back_to_home/"><input type='button' value='Home'></a></li><br><br>
+    <li><a href="/show_stock/"><input type='button' value='Complete Stock'></a></li><br><br>
+    <li><a href="/logout/"><input type='button' value='Logout'></a></li>
+  </ul>
+</nav>
+
+
+<article>
+  <h3 align="center"> Stock Details </h3>
+  <form action="/show_selected_stock/" method="GET">
+    <table align="center" cellspacing="10">
+      <tr>
+        <th>Search by Item Name</th>
+        <td>
+          <select name="itemname">
+            <option selected="selected">Select Item Name</option>
+            {% for name in itemnames %}
+              <option>{{name}}</option>
+            {% endfor %}
+          </select>
+        </td>
+        <td>
+          <input type='submit' value='Search'></a>
+        </td>
+      </tr>
+    </table>
+  </form>
+  <br><br>
+  <table align="center" border="1">
+    <tr>
+      <th>Batch Number</th>
+      <th>Item Name</th>
+      <th>Company Name</th>
+      <th>Price Per Unit</th>
+      <th>Manufacture Date</th>
+      <th>Expiry Date</th>
+      <th>Quantity</th>
+      <th>Dealer Name</th>
+      <th>Comments</th>
+    </tr>
+    {% for obj in data %}
+      <tr>
+      <th>{{obj.batch_num}}</th>
+      <th>{{obj.item_name}}</th>
+      <th>{{obj.company}}</th>
+      <th>{{obj.price_per_unit}}</th>
+      <th>{{obj.manf_date}}</th>
+      <th>{{obj.exp_date}}</th>
+      <th>{{obj.quantity}}</th>
+      <th>{{obj.dealer.person_info.first_name}}</th>
+      <th>{{obj.comments}}</th>
+    </tr>
+    {% endfor %}
+  </table>  
+</article>
+
+<footer>Copyright © PavanaMedicalGroups.com</footer>
+
+</div>
+
+</body>
+</html>

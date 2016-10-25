@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+
+nav {
+    float: left;
+    max-width: 160px;
+    height: 440px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 50px;
+	font-size:16px;
+	
+}
+
+			
+nav ul a {
+    text-decoration: none;
+	font-size:20px;
+}
+
+article {
+    margin-left: 170px;
+    height: 440px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Pavana Medical Solutions</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="/back_to_home/"><input type='button' value='Home'></a></li><br><br>
+    <li><a href="/show_stock/"><input type='button' value='Complete Stock'></a></li><br><br>
+    <li><a href="/logout/"><input type='button' value='Logout'></a></li>
+  </ul>
+</nav>
+
+
+<article>
+  <h3 align="center"> Stock Details </h3>
+  <br><br>
+  <table align="center" border="1">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>TIN number</th>
+    </tr>
+    {% for obj in data %}
+      <tr>
+      <th>{{obj.person_info.first_name}}</th>
+      <th>{{obj.person_info.phone}}</th>
+      <th>{{obj.person_info.email_id}}</th>
+      <th>{{obj.person_info.address}}</th>
+      <th>{{obj.tin}}</th>
+    </tr>
+    {% endfor %}
+  </table>  
+</article>
+
+<footer>Copyright © PavanaMedicalGroups.com</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+
+nav {
+    float: left;
+    max-width: 160px;
+    height: 440px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 50px;
+	font-size:16px;
+	
+}
+
+			
+nav ul a {
+    text-decoration: none;
+	font-size:20px;
+}
+
+article {
+    margin-left: 170px;
+    height: 440px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Pavana Medical Solutions</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="/load/"><input type='button' value='About Us'></a></li><br><br>
+    <li><a href="/contact/"><input type='button' value='Contact Us'></a></li><br><br>
+    
+  </ul>
+</nav>
+
+
+<article>
+  <h1>About Pavana</h1>
+  <p>Pavana Medical Solutions established in the year 2015 and they do provide solutions to your Medical related needs. This app will be helpful in managing your Medical Agency/Medical Shop/Hospitality service needs.</p>
+  <p>THis app can also helps you in Stock management, Billing and Communication services also...</p>
+  <p>Please login to explore more. If you are new to this app then please Contact us for Signup support</p>
+  <form action="/login/" method='get'>
+    <table align="center" border="1">
+      <tr><th>User Name</th><td><input type="text" name="user"></td></tr>
+      <tr><th>Password</th><td><input type="password" name="password"></td></tr>
+      <tr align="center"><td colspan="2"><input type="submit" name="" value="Login"></td></tr>
+    </table>
+  </form>
+</article>
+
+<footer>Copyright © PavanaMedicalGroups.com</footer>
+
+</div>
+
+</body>
+</html>

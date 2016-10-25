@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+}
+
+
+nav {
+    float: left;
+    max-width: 160px;
+    height: 440px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 50px;
+	font-size:16px;
+	
+}
+
+			
+nav ul a {
+    text-decoration: none;
+	font-size:20px;
+}
+
+article {
+    margin-left: 170px;
+    height: 440px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>Pavana Medical Solutions</h1>
+</header>
+  
+<nav>
+  <ul>
+    <li><a href="https://www.outlook.com/"><input type='button' value='Outlook'></a></li><br><br>
+    <li><a href="https://www.facebook.com/groups/274723362904141/"><input type="button" value="Like us"></a></li><br><br>
+    <li><a href="/logout/"><input type='button' value='Logout'></a></li><br><br>
+  </ul>
+</nav>
+
+
+<article>
+  <h1 align="center">Choose any one of below operations</h1>
+  <table align="center" cellspacing="80">
+    <tr><td><a href="/show_stock/"><input type='button' value='Complete Stock'></a></td>
+        <td><a href="/show_dealers/"><input type='button' value='Dealers'></a></td></tr>
+
+    <tr><td><a href="/shop/"><input type='button' value='Shop'></a></td>
+        <td><a href="/invoices/"><input type='button' value='Invoices'></a></td></tr>         
+  </table>
+
+</article>
+
+<footer>Copyright © PavanaMedicalGroups.com</footer>
+
+</div>
+
+</body>
+</html>
