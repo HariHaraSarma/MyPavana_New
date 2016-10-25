@@ -68,7 +68,8 @@ article {
   <p>Pavana Medical Solutions established in the year 2015 and they do provide solutions to your Medical related needs. This app will be helpful in managing your Medical Agency/Medical Shop/Hospitality service needs.</p>
   <p>THis app can also helps you in Stock management, Billing and Communication services also...</p>
   <p>Please login to explore more. If you are new to this app then please Contact us for Signup support</p>
-  <form action="/login/" method='get'>
+  <form action="/login/" method='post'>
+  {% csrf_token %}
     <table align="center" border="1">
       <tr><th>User Name</th><td><input type="text" name="user"></td></tr>
       <tr><th>Password</th><td><input type="password" name="password"></td></tr>

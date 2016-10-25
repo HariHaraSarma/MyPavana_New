@@ -36,9 +36,11 @@ class BachtoHomeView(View):
 			return HttpResponseRedirect('/load/')
 
 class LoginView(View):
-	def get(self, request, *args, **kwargs):
-		user = authenticate(username=request.GET.get('user'), 
-							password=request.GET.get('password'))
+	def post(self, request, *args, **kwargs):
+		import pdb
+		pdb.set_trace()
+		user = authenticate(username=request.POST.get('user'), 
+							password=request.POST.get('password'))
 		if user is not None:
 			if user.is_active:
 				login(request, user)
